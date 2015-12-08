@@ -17,7 +17,7 @@ Up a virtual machine Ubuntu Trusty64 (14.04), with the following features and sp
   - `/etc/apache2/sites-enabled`
   - `~` -> `/vagrant` (/home directory)
 - Set the memory to `1024`
-- Set the name to `ubuntu-server-php`
+- Set the name to `ubuntu-trusty64`
 - Execute the shell provision by `VagrantSetup.sh` file
 
 ## VagrantSetup.sh
@@ -48,3 +48,37 @@ message which should contain instructions on how to fix this error.
 
 #### Solution
 Run 'sudo /etc/init.d/vboxdrv setup'
+
+### Name already exists
+
+#### Error
+```
+A VirtualBox machine with the name '<name-of-virtual-machine>' already exists.
+Please use another name or delete the machine with the existing
+name, and try again.
+```
+
+#### Solution
+Run `vagrant global-status` to see all enviroments, and `vagrant destroy <id>` to deletes unnused enviroments.
+**or**
+Change the name of your virtual machine in Vagrantfile file:
+```
+	config.vm.provider "virtualbox" do |machine|
+		machine.memory = 1024
+		machine.name = "ubuntu-trusty64" # CHANGE THIS NAME
+	end
+```
+**or**
+Use `vagrant up --debug` to execute `up` with log.
+Locate on results, your directory of virtual machines (look for line `Default machine folder`).
+Access this with `cd <your-directory>` and delete the VM directory with `rm -Rf <vm-directory` (Use sudo if necessary).
+
+### stdin
+
+#### Error
+`==> default: stdin: is not a tty` or
+`==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory`
+
+#### Solution
+Enable the line on Vagrantfile, removing the `#` character
+`# config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"`
