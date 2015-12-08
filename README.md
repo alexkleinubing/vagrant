@@ -84,5 +84,5 @@ Access this with `cd <your-directory>` and delete the VM directory with `rm -Rf 
 `==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory`
 
 #### Solution
-Enable the line on Vagrantfile, removing the `#` character
+Enable the line on Vagrantfile, removing the `#` character:   
 `# config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"`
