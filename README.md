@@ -34,3 +34,17 @@ It is the file to shell provision. Execute a series of commands to install and c
 - Enables the Apache Rewrite Module;
 - Install Composer dependency management tool (https://getcomposer.org/);
 - Install Redis database nosql (http://redis.io/);
+
+## Issues
+
+### Kernel module not loaded
+
+#### Error
+```
+VirtualBox is complaining that the kernel module is not loaded. Please
+run `VBoxManage --version` or open the VirtualBox GUI to see the error
+message which should contain instructions on how to fix this error.
+```
+
+#### Solution
+Run 'sudo /etc/init.d/vboxdrv setup'
