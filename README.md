@@ -47,7 +47,7 @@ message which should contain instructions on how to fix this error.
 ```
 
 #### Solution
-Run 'sudo /etc/init.d/vboxdrv setup'
+Run `sudo /etc/init.d/vboxdrv setup`
 
 ### Name already exists
 
@@ -60,7 +60,9 @@ name, and try again.
 
 #### Solution
 Run `vagrant global-status` to see all enviroments, and `vagrant destroy <id>` to deletes unnused enviroments.
+
 **or**
+
 Change the name of your virtual machine in Vagrantfile file:
 ```
 	config.vm.provider "virtualbox" do |machine|
@@ -68,7 +70,9 @@ Change the name of your virtual machine in Vagrantfile file:
 		machine.name = "ubuntu-trusty64" # CHANGE THIS NAME
 	end
 ```
+
 **or**
+
 Use `vagrant up --debug` to execute `up` with log.
 Locate on results, your directory of virtual machines (look for line `Default machine folder`).
 Access this with `cd <your-directory>` and delete the VM directory with `rm -Rf <vm-directory` (Use sudo if necessary).
@@ -76,7 +80,7 @@ Access this with `cd <your-directory>` and delete the VM directory with `rm -Rf 
 ### stdin
 
 #### Error
-`==> default: stdin: is not a tty` or
+`==> default: stdin: is not a tty` or   
 `==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory`
 
 #### Solution
