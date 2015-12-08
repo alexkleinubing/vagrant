@@ -1,4 +1,4 @@
-# Vagrant
+# Vagrant Configurations
 
 Vagrant files to up a virtual machines with my setup.
 
@@ -37,52 +37,4 @@ It is the file to shell provision. Execute a series of commands to install and c
 
 ## Issues
 
-### Kernel module not loaded
-
-#### Error
-```
-VirtualBox is complaining that the kernel module is not loaded. Please
-run `VBoxManage --version` or open the VirtualBox GUI to see the error
-message which should contain instructions on how to fix this error.
-```
-
-#### Solution
-Run `sudo /etc/init.d/vboxdrv setup`
-
-### Name already exists
-
-#### Error
-```
-A VirtualBox machine with the name '<name-of-virtual-machine>' already exists.
-Please use another name or delete the machine with the existing
-name, and try again.
-```
-
-#### Solution
-Run `vagrant global-status` to see all enviroments, and `vagrant destroy <id>` to deletes unnused enviroments.
-
-_or_
-
-Change the name of your virtual machine in Vagrantfile file:
-```
-	config.vm.provider "virtualbox" do |machine|
-		machine.memory = 1024
-		machine.name = "ubuntu-trusty64" # CHANGE THIS NAME
-	end
-```
-
-_or_
-
-Use `vagrant up --debug` to execute `up` with log.
-Locate on results, your directory of virtual machines (look for line `Default machine folder`).
-Access this with `cd <your-directory>` and delete the VM directory with `rm -Rf <vm-directory` (Use sudo if necessary).
-
-### stdin
-
-#### Error
-`==> default: stdin: is not a tty` or   
-`==> default: dpkg-preconfigure: unable to re-open stdin: No such file or directory`
-
-#### Solution
-Enable the line on Vagrantfile, removing the `#` character:   
-`# config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"`
+See the "Wiki" section/tab.
