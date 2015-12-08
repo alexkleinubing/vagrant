@@ -10,15 +10,15 @@ Vagrantfile is the main configuration file for a virtual machine.
 
 Up a virtual machine Ubuntu Trusty64 (14.04), with the following features and specifications:
 
-- Private network IP: 192.168.100.101
+- Private network IP: `192.168.100.101`
 - Synchronize folders
-  - /var/www (www-data group and user, dmode: 777, fmode: 666)
-  - /etc/apache2/sites-available
-  - /etc/apache2/sites-enabled
-  - ~ -> /vagrant (/home directory)
-- Set the memory to 1024
-- Set the name to ubuntu-server-php
-- Execute the shell provision by VagrantSetup.sh file
+  - `/var/www` (www-data group and user, dmode: 777, fmode: 666)
+  - `/etc/apache2/sites-available`
+  - `/etc/apache2/sites-enabled`
+  - `~` -> `/vagrant` (/home directory)
+- Set the memory to `1024`
+- Set the name to `ubuntu-server-php`
+- Execute the shell provision by `VagrantSetup.sh` file
 
 ## VagrantSetup.sh
 
