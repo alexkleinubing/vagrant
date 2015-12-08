@@ -6,7 +6,7 @@ Vagrant files to up a virtual machines with my setup.
 
 Vagrantfile is the main configuration file for a virtual machine.
 
-### What does it do?
+##### What does it do?
 
 Up a virtual machine Ubuntu Trusty64 (14.04), with the following features and specifications:
 
@@ -24,7 +24,7 @@ Up a virtual machine Ubuntu Trusty64 (14.04), with the following features and sp
 
 It is the file to shell provision. Execute a series of commands to install and configure the virtual machine, leaving it ready for use.
 
-### What does it do?
+##### What does it do?
 
 - Update package files;
 - Defines a default password for the MySQL and tools;
