@@ -61,7 +61,7 @@ name, and try again.
 #### Solution
 Run `vagrant global-status` to see all enviroments, and `vagrant destroy <id>` to deletes unnused enviroments.
 
-**or**
+_or_
 
 Change the name of your virtual machine in Vagrantfile file:
 ```
@@ -71,7 +71,7 @@ Change the name of your virtual machine in Vagrantfile file:
 	end
 ```
 
-**or**
+_or_
 
 Use `vagrant up --debug` to execute `up` with log.
 Locate on results, your directory of virtual machines (look for line `Default machine folder`).
