@@ -13,8 +13,6 @@ Up a virtual machine Ubuntu Trusty64 (14.04), with the following features and sp
 - Private network IP: `192.168.100.101`
 - Synchronize folders
   - `/var/www` (www-data group and user, dmode: 777, fmode: 666)
-  - `/etc/apache2/sites-available`
-  - `/etc/apache2/sites-enabled`
   - `~` -> `/vagrant` (/home directory)
 - Set the memory to `1024`
 - Set the name to `ubuntu-trusty64`
