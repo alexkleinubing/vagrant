@@ -23,7 +23,7 @@ Vagrant.configure(2) do |config|
 	# Create a forwarded port mapping which allows access to a specific port
 	# within the machine from a port on the host machine. In the example below,
 	# accessing "localhost:8080" will access port 80 on the guest machine.
-	# config.vm.network "forwarded_port", guest: 80, host: 8080
+	config.vm.network "forwarded_port", guest: 80, host: 8080
 
 	# Create a private network, which allows host-only access to the machine
 	# using a specific IP.
@@ -38,12 +38,12 @@ Vagrant.configure(2) do |config|
 	# the path on the host to the actual folder. The second argument is
 	# the path on the guest to mount the folder. And the optional third
 	# argument is a set of non-required options.
+	config.vm.synced_folder "~", "/vagrant", owner: "vagrant", group: "vagrant"
 	config.vm.synced_folder "/var/www", "/var/www",
 	:owner => "www-data", :group => "www-data",
 	mount_options: ['dmode=777','fmode=666']
-	config.vm.synced_folder "/etc/apache2/sites-available", "/etc/apache2/sites-available"
-	config.vm.synced_folder "/etc/apache2/sites-enabled", "/etc/apache2/sites-enabled"
-	config.vm.synced_folder "~", "/vagrant", owner: "vagrant", group: "vagrant"
+	# config.vm.synced_folder "/etc/apache2/sites-available", "/etc/apache2/sites-available"
+	# config.vm.synced_folder "/etc/apache2/sites-enabled", "/etc/apache2/sites-enabled"
 
 	# Provider-specific configuration so you can fine-tune various
 	# backing providers for Vagrant. These expose provider-specific options.
@@ -73,7 +73,7 @@ Vagrant.configure(2) do |config|
 
 	# resolve "stdin: is not a tty warning", related issue and proposed fix: 
 	# https://github.com/mitchellh/	vagrant/issues/1673
-	# config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
+	config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 
 	# Enable provisioning with a shell script. Additional provisioners such as
 	# Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
