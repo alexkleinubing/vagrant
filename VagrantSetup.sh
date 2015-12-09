@@ -34,14 +34,14 @@ sudo add-apt-repository ppa:ondrej/php5-5.6
 echo "- Atualizando lista de pacotes"
 sudo apt-get update
 
-echo "- Ajustando ServerName localhost"
-sudo echo 'ServerName localhost' >> /etc/apache2/apache2.conf
-
 echo "- Instalando MySQL, PHPMyAdmin e alguns outros módulos"
 sudo apt-get install mysql-server-5.5 mysql-client phpmyadmin --assume-yes --force-yes
 
 echo "- Instalando PHP, Apache e alguns módulos"
 sudo apt-get install php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt  php5-mysql --assume-yes --force-yes
+
+echo "- Ajustando ServerName localhost"
+sudo echo 'ServerName localhost' >> /etc/apache2/apache2.conf
 
 echo "- Habilitando mod-rewrite do Apache"
 sudo a2enmod rewrite
