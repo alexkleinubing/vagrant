@@ -26,7 +26,7 @@ phpmyadmin      phpmyadmin/mysql/app-pass       password $DEFAULTPASS
 EOF
 
 echo "- Instalando pacotes básicos"
-sudo apt-get install vim curl python-software-properties git-core --assume-yes --force-yes
+sudo apt-get install vim joe curl python-software-properties git-core --assume-yes --force-yes
 
 echo "- Adicionando repositório do pacote PHP 5.6"
 sudo add-apt-repository ppa:ondrej/php5-5.6
