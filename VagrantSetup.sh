@@ -38,7 +38,7 @@ echo "- Instalando MySQL, PHPMyAdmin e alguns outros módulos"
 sudo apt-get install mysql-server-5.5 mysql-client phpmyadmin --assume-yes --force-yes
 
 echo "- Instalando PHP, Apache e alguns módulos"
-sudo apt-get install php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt php5-intl php5-mysql --assume-yes --force-yes
+sudo apt-get install php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt php5-intl php5-sqlite php5-mysql --assume-yes --force-yes
 
 echo "- Ajustando ServerName localhost"
 sudo echo 'ServerName localhost' >> /etc/apache2/apache2.conf
