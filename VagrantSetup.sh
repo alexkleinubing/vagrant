@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo "######################################################"
-echo "##### Instalando ambiente de desenvolvimento PHP #####"
-echo "######################################################"
-
 echo "- Atualizando lista de pacotes"
 sudo apt-get update
 
@@ -56,6 +52,20 @@ sudo mv composer.phar /usr/local/bin/composer
 echo "- Instalando banco NoSQL Redis" 
 sudo apt-get install redis-server --assume-yes
 sudo apt-get install php5-redis
+
+echo "- Instalando Ruby"
+sudo apt-get install ruby-full
+
+echo "- Instalando RubyGems"
+wget https://rubygems.org/rubygems/rubygems-2.5.1.tgz
+tar xvf rubygems-2.5.1.tgz
+cd rubygems-2.5.1
+sudo ruby setup.rb
+gem update --system 
+
+echo "- Instalando NodeJS"
+sudo apt-get install nodejs
+sudo apt-get install npm
 
 # Instale a partir daqui o que você desejar 
 
