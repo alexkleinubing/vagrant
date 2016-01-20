@@ -32,6 +32,13 @@ It is the file to shell provision. Execute a series of commands to install and c
 - Enables the Apache Rewrite Module;
 - Install Composer dependency management tool (https://getcomposer.org/);
 - Install Redis database nosql (http://redis.io/);
+- Install Ruby and RubyGems 2.5.1
+- Install NodeJS and NPM
+
+## Creating projects
+
+You can create a project dir `/var/www/myproject` and use `vhost` command to create a Apache's Virtual Hosts   
+You can create a Jekyll project with `gem install jekyll`
 
 ## Issues
 
