@@ -64,8 +64,8 @@ sudo ruby setup.rb
 gem update --system 
 
 echo "- Instalando NodeJS"
-sudo apt-get install nodejs
-sudo apt-get install npm
+sudo apt-get install nodejs --assume-yes
+sudo apt-get install npm --assume-yes
 
 # Instale a partir daqui o que você desejar 
 
