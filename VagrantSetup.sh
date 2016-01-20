@@ -45,6 +45,11 @@ sudo a2enmod rewrite
 echo "- Reiniciando Apache"
 sudo service apache2 restart
 
+echo "- Baixando e instalando vhosts.sh"
+git clone https://github.com/alexkleinubing/vhosts.git
+sudo chmod +x vhosts/vhost.sh
+sudo mv /vhosts/vhost.sh ./usr/bin/vhost
+
 echo "- Baixando e instalando Composer"
 curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
