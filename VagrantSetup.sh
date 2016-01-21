@@ -58,8 +58,10 @@ echo "- Instalando banco NoSQL Redis"
 sudo apt-get install redis-server --assume-yes
 sudo apt-get install php5-redis
 
-echo "- Instalando Ruby"
-sudo apt-get install ruby-full
+echo "- Instalando RVM e Ruby 2.3.0"
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable --ruby=2.3.0
+rvm --default set 2.3.0
 
 echo "- Instalando RubyGems"
 wget https://rubygems.org/rubygems/rubygems-2.5.1.tgz
