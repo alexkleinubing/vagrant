@@ -12,11 +12,10 @@ Up a virtual machine Ubuntu Trusty64 (14.04), with the following features and sp
 
 - Private network IP: `192.168.100.101`
 - Synchronize folders
-  - `/var/www` (www-data group and user, dmode: 777, fmode: 666)
+  - "up" folder -> `/var/www`
   - `~` -> `/vagrant` (/home directory)
 - Set the memory to `1024`
-- Set the name to `ubuntu-trusty64`
-- Execute the shell provision by `VagrantSetup.sh` file
+- Execute the shell provision file
 
 ## VagrantSetup.sh
 
@@ -30,15 +29,16 @@ It is the file to shell provision. Execute a series of commands to install and c
 - Install MySQL, PHPMyAdmin and some other modules;
 - Install PHP, Apache and some other modules;
 - Enables the Apache Rewrite Module;
+- Install `vhost` command to create Virtual Hosts
 - Install Composer dependency management tool (https://getcomposer.org/);
 - Install Redis database nosql (http://redis.io/);
-- Install Ruby and RubyGems 2.5.1
+- Install RVM and Ruby
 - Install NodeJS and NPM
 
 ## Creating projects
 
 You can create a project dir `/var/www/myproject` and use `vhost` command to create a Apache's Virtual Hosts   
-You can create a Jekyll project with `gem install jekyll`
+You can create a Jekyll project with `jekyll new myproject`
 
 ## Issues
 
