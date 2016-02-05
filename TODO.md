@@ -1,4 +1,3 @@
-- Verificar se já esta instalado algo, principalmente o Ruby que acaba baixando varios a cada provisão;
 - Editar as variaveis dentro do vhost.sh, principalmente o IP;
 - vhost n checa se possui permissão ROOT quando esta dentro da VM, mas funciona no local;
 - Verificar se já existe variavel ServerName em /etc/apache2/apache2.conf
