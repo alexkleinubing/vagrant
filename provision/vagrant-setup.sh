@@ -51,6 +51,7 @@ cd /var/www/
 git clone https://github.com/alexkleinubing/vhosts.git
 sudo chmod +x vhosts/vhost.sh
 sudo mv vhosts/vhost.sh /usr/bin/vhost
+sudo -Rf vhosts
 
 echo "- Baixando e instalando Composer"
 curl -sS https://getcomposer.org/installer | php >> /dev/null
